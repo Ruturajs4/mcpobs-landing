@@ -4,6 +4,7 @@ import { GeistMono } from "geist/font/mono";
 import "./globals.css";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://mcpobs.dev"),
   title: "mcpobs - Observability built for MCP servers",
   description:
     "See which tool failed, why it failed, and where the time went. Purpose-built tracing for Model Context Protocol servers, from a self-hosted core to a managed control plane.",

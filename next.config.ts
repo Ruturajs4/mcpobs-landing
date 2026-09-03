@@ -13,12 +13,9 @@ const nextConfig: NextConfig = {
     unoptimized: true,
     remotePatterns: [{ protocol: "https", hostname: "picsum.photos" }],
   },
-  // GitHub Pages serves a project repo (not a ruturajs4.github.io repo)
-  // at /<repo-name>/, so every asset/link needs that prefix baked in.
-  // Remove both if/when this moves to a custom domain, where the site
-  // lives at the root again.
-  basePath: "/mcpobs-landing",
-  assetPrefix: "/mcpobs-landing/",
+  // No basePath/assetPrefix: mcpobs.dev (see public/CNAME) serves from the
+  // root, unlike the ruturajs4.github.io/mcpobs-landing/ URL this used
+  // before the custom domain existed.
 };
 
 export default nextConfig;
