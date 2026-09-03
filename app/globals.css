@@ -1,0 +1,46 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, monospace;
+
+  /* Locked dark theme. Off-black / off-white, never pure #000 or #fff. */
+  --color-ink: #08090b;
+  --color-surface: #0e1013;
+  --color-surface-raised: #15181c;
+  --color-border: #23272d;
+  --color-border-soft: #1a1d21;
+  --color-paper: #f2f3f4;
+  --color-paper-dim: #a6acb4;
+  --color-paper-faint: #6b7280;
+
+  /* Single locked accent: electric cyan. No purple, no neon glow. */
+  --color-signal: #29e0e8;
+  --color-signal-dim: #1a8f96;
+  --color-signal-ink: #06181a;
+}
+
+html {
+  color-scheme: dark;
+}
+
+body {
+  background: var(--color-ink);
+  color: var(--color-paper);
+}
+
+::selection {
+  background: var(--color-signal);
+  color: var(--color-signal-ink);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
