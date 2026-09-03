@@ -1,5 +1,4 @@
-import Link from "next/link";
-import { ArrowRight } from "@phosphor-icons/react/dist/ssr";
+import { RequestAccessForm } from "./request-access-form";
 
 export function Cta() {
   return (
@@ -16,20 +15,11 @@ export function Cta() {
             Currently invite-only, while we work directly with early teams.
           </h2>
           <p className="mx-auto mt-4 max-w-md text-paper-dim">
-            Tell us about your MCP server and we&apos;ll set up your first
+            Tell us about your org and we&apos;ll set up your first
             organisation.
           </p>
 
-          <Link
-            href="mailto:ruturajshinde2807@gmail.com?subject=Request%20access"
-            className="group mt-8 inline-flex items-center gap-2 rounded-full bg-signal px-6 py-3 text-sm font-medium text-signal-ink transition-transform active:scale-[0.98]"
-          >
-            Request access
-            <ArrowRight
-              weight="bold"
-              className="h-4 w-4 transition-transform group-hover:translate-x-0.5"
-            />
-          </Link>
+          <RequestAccessForm />
         </div>
       </div>
     </section>

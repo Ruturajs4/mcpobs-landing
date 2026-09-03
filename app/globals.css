@@ -18,6 +18,12 @@
   --color-signal: #29e0e8;
   --color-signal-dim: #1a8f96;
   --color-signal-ink: #06181a;
+
+  /* Status red, reserved for "something is actually wrong" (a failing span,
+     a firing alert) -- never decoration, same discipline as --color-signal
+     being the only accent. */
+  --color-danger: #fb7185;
+  --color-danger-soft: #fda4af;
 }
 
 html {

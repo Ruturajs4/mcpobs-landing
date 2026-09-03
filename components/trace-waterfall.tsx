@@ -20,7 +20,7 @@ const SPANS: Span[] = [
 const KIND_STYLES: Record<Span["kind"], string> = {
   ok: "bg-signal/70",
   child: "bg-paper-dim/40",
-  error: "bg-rose-400/80",
+  error: "bg-danger/80",
 };
 
 const container: Variants = {
@@ -44,7 +44,7 @@ export function TraceWaterfall() {
       <div className="mb-4 flex items-center justify-between text-paper-faint">
         <span>trace_id 7f3a1c…e92b</span>
         <span className="flex items-center gap-1.5">
-          <span className="h-1.5 w-1.5 rounded-full bg-rose-400" />
+          <span className="h-1.5 w-1.5 rounded-full bg-danger" />
           1 failing span
         </span>
       </div>
@@ -60,7 +60,7 @@ export function TraceWaterfall() {
           <div key={span.name} className="flex items-center gap-3">
             <span
               className={`w-40 shrink-0 truncate ${
-                span.kind === "error" ? "text-rose-300" : "text-paper-dim"
+                span.kind === "error" ? "text-danger-soft" : "text-paper-dim"
               }`}
             >
               {span.name}
@@ -78,7 +78,7 @@ export function TraceWaterfall() {
 
       <div className="mt-4 flex items-center justify-between border-t border-border-soft pt-3 text-paper-faint">
         <span>error.type</span>
-        <span className="text-rose-300">tool_error</span>
+        <span className="text-danger-soft">tool_error</span>
       </div>
     </div>
   );

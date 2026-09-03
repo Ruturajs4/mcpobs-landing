@@ -22,6 +22,12 @@ export function Footer() {
             GitHub
           </Link>
           <Link
+            href="https://docs.mcpobs.dev"
+            className="text-sm text-paper-dim transition-colors hover:text-paper"
+          >
+            Docs
+          </Link>
+          <Link
             href="#request-access"
             className="text-sm text-paper-dim transition-colors hover:text-paper"
           >

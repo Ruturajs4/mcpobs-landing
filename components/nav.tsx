@@ -4,7 +4,8 @@ import { LogoMark } from "./logo-mark";
 const LINKS = [
   { href: "#product", label: "Product" },
   { href: "#how-it-works", label: "How it works" },
-  { href: "https://github.com/Ruturajs4/mcpobs", label: "Docs" },
+  { href: "#managed", label: "Managed" },
+  { href: "https://docs.mcpobs.dev", label: "Docs" },
 ];
 
 export function Nav() {
