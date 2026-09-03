@@ -3,6 +3,11 @@ import { join } from "node:path";
 import { ImageResponse } from "next/og";
 
 export const runtime = "nodejs";
+// Required for `output: "export"` (next.config.ts): tells Next this route
+// has no per-request input, so it can be rendered once at build time
+// (when node_modules -- which the font reads below need -- actually
+// exists) rather than needing a live server.
+export const dynamic = "force-static";
 export const alt = "mcpobs - Observability built for MCP servers";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
